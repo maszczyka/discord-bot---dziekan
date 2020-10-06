@@ -10,10 +10,12 @@ module.exports = {
         .addFields(
             {name: '!linki', value: 'Wyświetla zbiór przydatnych linków'},
             {name: '!p', value: 'losowe odpowiedzi'},
-            {name: '!k10', value: 'rzut kostką k10'},
-            {name: '!order', value: 'wręcza order'}
+            {name: '!kosc x y', value: 'rzut kostką | x - ilość kostek, y - ilość ścian | ex. !kosc 2 10 (rzut dwiema kostkami o dziesięciu ścianach)'},
+            {name: '!order', value: 'wręcza order'},
+            {name: '!dziedzina', value: 'Wyrzuca losową dziedzinę + dyscyplinę'},
+            {name: '!kawa', value: 'wręcza kawę'}
             );
-
+            
         message.channel.send(komendy);
     }
 }

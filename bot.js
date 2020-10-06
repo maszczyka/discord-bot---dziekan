@@ -28,6 +28,12 @@ client.on("ready", () => {
     }); 
     });
 
+client.on("guildMemberAdd", (member) => {
+        console.log(member)
+        const channel = member.guild.channels.cache.get('761954347016781825')
+        channel.send(`Please welcome <@${member.id}> to the server!`);
+    });
+
 client.on('message', message => {
 // Jezeli wiadomosc nie zaczyna sie od prefiksu, lub to bot jest autorem nie rób nic.
 if(!message.content.startsWith(prefix) || message.author.bot) return; 
@@ -37,26 +43,43 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
 
 // Nazwa komendy
-if(command === 'siema'){
-// Co robi komenda
-    message.channel.send('Eluwina');
-} else if(command === 'link') {
-    client.commands.get('link').execute(message, args);
-} else if(command === 'k10') {
-    client.commands.get('k10').execute(message, args);
-} else if(command === 'p') {
+if(command === 'p') {
     client.commands.get('pytania').execute(message, args);
-} else if(command === 'order') {
-    message.channel.send('*daje order*');
-} else if(command === 'dodaj') {
-    client.commands.get('dodaj').execute(message, args);
-} else if(command === 'linki') {
+} 
+
+else if(command === 'order') {
+    message.channel.send('*wręcza order*');
+} 
+
+else if(command === 'linki') {
     client.commands.get('linki').execute(message, args);
-} else if(command === 'komendy') {
+} 
+
+else if(command === 'komendy') {
     client.commands.get('komendy').execute(message, args);
+} 
+
+else if(command === 'kosc') {
+    client.commands.get('kosc').execute(message, args);
 }
 
+else if(command === 'zlap') {
+    client.commands.get('zlap').execute(message, args);
+} 
+
+else if(command === 'kawa') {
+    message.channel.send("*podaje kawę*");
+}
+
+else if(command === 'dziedzina') {
+    client.commands.get('dziedzina').execute(message, args);
+} 
+
+else if(command === 'mute') {
+    client.commands.get('mute').execute(message, args);
+}
 });
+
 
 
 client.login(auth.token)

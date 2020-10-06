@@ -9,6 +9,9 @@
   "author": "łajza",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "fast-xml-parser": "^3.17.4",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.6.1"
   }
 }

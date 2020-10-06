@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'linki',
-    description: 'linki',
+    description: 'Wysyła do adresta wiadomości zbiór przydantych linków na forum',
     execute(message, args) {
         let linkacze = new Discord.MessageEmbed()
         .setColor('#c8cad3')
